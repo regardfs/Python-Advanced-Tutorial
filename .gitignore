@@ -2,7 +2,6 @@
 # https://github.com/github/gitignore/blob/master/Python.gitignore
 
 *.py[co]
-salt/salt-master/salt/test.sls
 # Packages
 *.egg
 *.egg-info

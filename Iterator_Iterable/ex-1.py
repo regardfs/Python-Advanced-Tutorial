@@ -27,7 +27,7 @@ URL = 'https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_
 
 class StationInfoIterator(Iterator):
 
-    def __init__(self, cities, url):
+    def __init__(self, cities=None, url=URL):
         self.cities = cities
         self.index = 0
         self.url = url
@@ -74,7 +74,6 @@ class StationInfoIterable(Iterable):
 
     def __iter__(self):
         return StationInfoIterator(self.cities, self.url)
-
 
 
 # test info
