@@ -37,5 +37,7 @@ f.close()
 # buffering = 1, line buffer, write a character of '\n' will immediately dump to file
 # buffering > 1, full buffer, only write certain bytes could dump to file
 # buffering = 0, no buffer, dump to file whatever you input
+# buffering default is -1, which represents 4096 bytes(one block)
+
 
 
