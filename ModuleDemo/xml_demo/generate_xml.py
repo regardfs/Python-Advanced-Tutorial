@@ -17,3 +17,7 @@ elem_date.text = "2017-01-26"
 elem_root.append(elem_date)
 
 # write element tree to file
+elem_tree = ElementTree(elem_root)
+elem_tree.write("1.xml")
+
+
