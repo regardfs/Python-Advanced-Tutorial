@@ -4,6 +4,8 @@ from abc import ABCMeta, abstractmethod
 from math import sqrt
 
 # we only need to define two type of compare function, one is __eq__ and other one could be  __lt__ or __gt__
+
+
 @total_ordering
 class shape(object):
 
