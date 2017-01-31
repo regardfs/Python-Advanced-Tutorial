@@ -7,8 +7,6 @@ def csv_to_xml(file_name):
         reader = csv.reader(f)
         header = reader.next()              # every element in headers should be the tag of the xml file
         elem_root = Element("STOCK")
-        elem_root.set("code", u"600000")
-        elem_root.text = "PFYH"
         for row in reader:
             elem_row = Element("ROW")
             elem_root.append(elem_row)
@@ -22,7 +20,7 @@ def csv_to_xml(file_name):
 
 def xml_format(elem, level=0):
     if len(elem) > 0:
-        elem.text = '\n' + ' ' * level
+        elem.text = '\n' + '\t' * (level + 1)
         for child in elem:
             xml_format(child, level+1)
         child.tail = child.tail[:-1]
