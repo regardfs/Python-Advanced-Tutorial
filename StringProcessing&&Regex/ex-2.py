@@ -25,6 +25,9 @@ str3.rjust(30)
 str3.ljust(30)
 # '         hello, world         '
 str3.center(30)
+# fill with str
+# "000001"
+"1".rjust(6, "0")
 
 # furthermore, we could use format
 format(str3, '>30')  # rjust
