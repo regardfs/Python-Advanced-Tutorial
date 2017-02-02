@@ -1,6 +1,7 @@
 from random import choice
 import time
 
+
 def f():
     print "in f"
 
