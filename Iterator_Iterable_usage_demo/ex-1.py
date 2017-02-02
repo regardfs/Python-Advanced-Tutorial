@@ -62,7 +62,7 @@ class StationInfoIterator(Iterator):
         return self.get_station_info(city)
 
 
-# iterable should have method of __iter__()
+# iterable should have method of __iter__(), which returns an Iterator
 # below is how to create a iterable object
 
 
