@@ -24,3 +24,26 @@ with DatabaseConnection() as mydbconn:
 
 # https://www.python.org/dev/peps/pep-0343/
 
+
+# an example
+class Context(object):
+
+    def __enter__(self):
+        print "entering the zone"
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print "leaving the zone"
+        if exc_type is None:
+            print "with no error"
+        else:
+            print "with an error (%s)" % exc_val
+
+# test 1: no exception
+with Context():
+    print "i am in the normal zone"
+
+# test 2: exception
+with Context():
+    print "i am in the Exception zone"
+    raise TypeError("Exception zone test")
+
