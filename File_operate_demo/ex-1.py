@@ -40,4 +40,12 @@ f.close()
 # buffering default is -1, which represents 4096 bytes(one block)
 
 
+# furthermore, we could set encoding type when open a file
+# "wt": open with write/text mode
+f = open("text.txt", "wt", encoding="utf-8")
+f.write('您好，我爱python！')
+f.close()
 
+f = open("text.txt", "rt", encoding="utf-8")
+s = f.read()
+print s
