@@ -1,6 +1,6 @@
 # we could use contextmanager instead of create a class with __enter__, __exit__
 # yeild separate the non_exception and exception generator!
-
+# https://jeffknupp.com/blog/2016/03/07/python-with-context-managers/
 from contextlib import contextmanager
 
 
@@ -76,3 +76,29 @@ with logged(One, called):
     one.one(two)
 
 calls
+
+
+
+
+
+# Everything before the call to yield is considered the code for __enter__().
+# Everything after is the code for __exit__().
+# Let's rewrite our File context manager using the decorator approach:
+
+from contextlib import contextmanager
+
+@contextmanager
+def open_file(path, mode):
+    the_file = open(path, mode)
+    yield the_file
+    the_file.close()
+
+files = []
+
+for x in range(100000):
+    with open_file('foo.txt', 'w') as infile:
+        files.append(infile)
+
+for f in files:
+    if not f.closed:
+        print('not closed')
