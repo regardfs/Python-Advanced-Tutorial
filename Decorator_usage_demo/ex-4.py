@@ -30,13 +30,13 @@ def warn(timeout):
 
 @warn(1.5)
 def fun():
-    print "testing"
+    print("testing")
     while randint(0,1):
         time.sleep(randint(0, 2))
 
 
 # set timeout by wrapper function settimeout
 fun.settimeout(1)
-for _ in xrange(10):
+for _ in range(10):
     fun()
 
