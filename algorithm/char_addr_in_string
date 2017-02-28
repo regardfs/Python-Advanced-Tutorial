@@ -1,0 +1,7 @@
+s = "abcdasdadqwweq"
+temp_set, char_list, char_addr_dict = set(), [], {}
+for char in s:
+    temp_set.update(char)
+    char_list.append(char)
+for char in temp_set:
+    char_addr_dict[char] = [index for index, val in enumerate(s) if val == char]
