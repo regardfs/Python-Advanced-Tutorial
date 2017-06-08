@@ -1,0 +1,6 @@
+[2017-05-25 15:57:20,263] log_test1.py [INFO] pl1
+[2017-05-25 15:57:20,264] log_test2.py [INFO] pl2
+[2017-05-25 15:57:21,249] log_test1.py [INFO] pl1
+[2017-05-25 15:57:21,249] log_test2.py [INFO] pl2
+[2017-05-25 15:57:21,893] log_test1.py [INFO] pl1
+[2017-05-25 15:57:21,893] log_test2.py [INFO] pl2
