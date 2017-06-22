@@ -27,3 +27,20 @@ while True:
 # if we define a deque with certain maxlen, we could use
 
 lines = deque(maxlen=5)
+
+# another example
+
+dq = deque([x for x in range(10)], maxlen=10)
+
+dq
+# deque([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+dq.rotate(1)
+# deque([9, 0, 1, 2, 3, 4, 5, 6, 7, 8])
+dq.rotate(-1)
+# deque([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+dq.appendleft(-1)
+# deque([-1, 0, 1, 2, 3, 4, 5, 6, 7, 8])
+dq.remove(-1)
+# deque([0, 1, 2, 3, 4, 5, 6, 7, 8])
+dq.extend([9,10,11])
+# deque([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
