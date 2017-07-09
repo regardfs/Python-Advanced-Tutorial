@@ -6,3 +6,5 @@ class g_dpm(object):
 
 # e_dpm = g_dpm(9.8)
 # when there is a __call__ in instance initial, it could execute.
+
+

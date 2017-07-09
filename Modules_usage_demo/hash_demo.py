@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 # 原子不可变类型例如str bype 和数值类型，都是可散列类型，frozenset也是可散列的，元祖也是可散列的
 tt = (1, 2, (2, 4))
 hash(tt)
