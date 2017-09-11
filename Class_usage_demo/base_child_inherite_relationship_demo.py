@@ -3,20 +3,22 @@
 
 class Base(object):
     def method(self):
-        print "Base"
+        print("Base")
 
+class Base0(Base):
+    def method(self):
+        print("Base0")
 
 class Base1(Base):
     def method(self):
-        print "Base1"
-
+        print("Base1")
 
 class Base2(Base):
     def method(self):
-        print "Base2"
+        print("Base2")
 
 
-class Base3(Base1, Base2):
+class Base3(Base0, Base1, Base2):
     pass
 
 

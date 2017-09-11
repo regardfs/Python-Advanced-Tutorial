@@ -1,3 +1,7 @@
+# -*- encoding: utf-8 -*-
+# 装饰器函数在导入时立刻执行，包裹函数只有在显示调用时才会运行
+
+
 from functools import wraps
 
 

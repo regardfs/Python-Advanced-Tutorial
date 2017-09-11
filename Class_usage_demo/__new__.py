@@ -12,5 +12,5 @@ class inttuple(tuple):
         return super(inttuple, cls).__new__(cls, g)
 
     def __init__(self, iterable):
-        print self
+        print(self)
         super(inttuple, self).__init__(iterable)

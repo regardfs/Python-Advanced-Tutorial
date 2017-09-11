@@ -4,7 +4,11 @@ class g_dpm(object):
     def __call__(self, t):
         return (self.g*t**2)/2
 
-# e_dpm = g_dpm(9.8)
-# when there is a __call__ in instance initial, it could execute.
+# when there is a __call__ in instance initial, it's instance could execute as function
+
+e_dpm = g_dpm(9.8)
+e_dpm(2)
+
+
 
 
