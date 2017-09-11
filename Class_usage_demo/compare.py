@@ -20,16 +20,20 @@ class shape(object):
             if isinstance(other, shape):
                 if self.area() > other.area():
                     return True
+                else:
+                    return False
         except TypeError:
-            print "Type Error!!!"
+            print("Type Error!!!")
 
     def __eq__(self, other):
         try:
             if isinstance(other, shape):
                 if self.area() == other.area():
                     return True
+                else:
+                    return False
         except TypeError:
-            print "Type Error!!!"
+            print("Type Error!!!")
 
 
 class Circle(shape):
